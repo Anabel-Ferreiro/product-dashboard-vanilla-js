@@ -28,8 +28,8 @@ function displayProducts(products) {
   products.slice(0, 5).forEach(function(product) {
     const name = product.fields.name;
     const price = (product.fields.price / 100).toFixed(2);
-    const image = product.fields.images && product.fields.images[0] 
-  ? product.fields.images[0].url 
+    const image = product.fields.image && product.fields.image[0] 
+  ? product.fields.image[0].url 
   : "https://via.placeholder.com/200";
 
     const card = document.createElement("div");
