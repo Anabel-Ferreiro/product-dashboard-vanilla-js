@@ -18,6 +18,10 @@ function fetchProductsThen() {
 // Step 6: Reusable error handler
 function handleError(error) {
   console.log("An error occurred: " + error.message);
+  const container = document.getElementById("product-container");
+  if (container) {
+    container.innerHTML = `<div class="error">Error loading products. Please try again later.</div>`;
+  }
 }
 
 // Step 5: Display first 5 products
